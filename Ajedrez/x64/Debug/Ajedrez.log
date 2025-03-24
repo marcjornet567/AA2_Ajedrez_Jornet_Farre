@@ -1,0 +1,22 @@
+﻿  main.cpp
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(3,26): error C2087: 'chessBoard': missing subscript
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(5,22): error C2059: syntax error: ';'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(5,27): error C2059: syntax error: ')'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(7,3): error C2059: syntax error: 'for'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(7,3): error C2143: syntax error: missing ')' before ';'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(7,19): error C2065: 'j': undeclared identifier
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(7,23): error C2059: syntax error: ';'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(7,25): error C2065: 'j': undeclared identifier
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(7,28): error C2059: syntax error: ')'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(9,18): error C2065: 'j': undeclared identifier
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(9,26): error C2059: syntax error: ';'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(11,2): error C2059: syntax error: '}'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(11,2): error C2143: syntax error: missing ';' before '}'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(12,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(12,1): error C2059: syntax error: '}'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(14,41): error C2143: syntax error: missing ';' before '{'
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(14,41): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(34,7): error C2087: 'chessBoard': missing subscript
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(34,7): error C2133: 'chessBoard': unknown size
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(35,2): error C3861: 'iniciarTablero': identifier not found
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(36,2): error C3861: 'PrinteoTablero': identifier not found

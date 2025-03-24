@@ -1,14 +1,17 @@
 #pragma once
 //llibreries
 #include <iostream>
+
+/*llibreries que d moment no es fan servir i s'hauran d'eliminar
 #include <vector>
 #include <time.h>
 #include <thread>
 #include <chrono>
 #include <Windows.h>
+*/
 
 //llibreries propies
-//#include "keyboard.h"
+//#include ""
 using namespace std;
 
 //defines

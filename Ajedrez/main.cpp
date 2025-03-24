@@ -1,4 +1,4 @@
-#include <iostream>
+#include "const.h"
 
 void IniciarTablero(char chessBoard[][]) {
 	//Funcionament Taulell
@@ -9,18 +9,15 @@ void IniciarTablero(char chessBoard[][]) {
 			chessBoard[i][j] = '*';
 		}
 	}
-
 }
 
 void PrinteoTablero(char chessBoard[][]){
 	cout << '  ';
-
 	for (int i = 0; i < ; i++)
 	{
 		cout << i+1 << ' ';
 	}
 	cout << endl;
-
 	for (int i = 0; i < ; i++)
 	{
 		cout << 8-i << ' ';
@@ -37,7 +34,4 @@ int main() {
 	char chessBoard[][];
 	iniciarTablero(chessBoard);
 	PrinteoTablero(chessBoard);
-	
-
-	
 }
