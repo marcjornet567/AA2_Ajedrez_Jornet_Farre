@@ -1,6 +1,6 @@
 #include "const.h"
 #include "taulell.h"
-#include "const.h"
+
 
 int main() {
 	//Creacio de Taulell
