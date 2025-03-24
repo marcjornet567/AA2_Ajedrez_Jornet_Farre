@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="const.h" />
     <ClInclude Include="taulell.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
