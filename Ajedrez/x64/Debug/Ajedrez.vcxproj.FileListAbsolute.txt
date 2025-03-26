@@ -1,1 +1,2 @@
 C:\Users\MarcJornetBrugues.AzureAD\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\x64\Debug\Ajedrez.exe
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\x64\Debug\Ajedrez.exe
