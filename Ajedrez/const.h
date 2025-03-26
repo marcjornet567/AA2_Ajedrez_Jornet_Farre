@@ -1,13 +1,14 @@
 #pragma once
 //llibreries
 #include <iostream>
+#include <Windows.h>
 
 /*llibreries que d moment no es fan servir i s'hauran d'eliminar
 #include <vector>
 #include <time.h>
 #include <thread>
 #include <chrono>
-#include <Windows.h>
+
 */
 
 //llibreries propies
@@ -16,6 +17,8 @@ using namespace std;
 
 //defines
 //tauler
+#define DIFERENCIA_ASCI 32
+#define ASCI_NUM_INICI 64
 #define TAMANY_TAULELL 8
 #define ESPAI '*'
 //peces blanques

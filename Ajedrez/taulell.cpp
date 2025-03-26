@@ -1,4 +1,5 @@
 #include "const.h"
+#include "utils.h"
 
 void IniciarTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 	//Funcionament Taulell
@@ -65,4 +66,46 @@ void PrinteoTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 		}
 		cout << endl;
 	}
+}
+
+position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
+
+	position getPiceByUser;
+	bool isGettingAPice = true;
+	do
+	{
+		isGettingAPice = true;
+		cout << "---------------" << endl;
+		cout << "Elige una piza:" << endl;
+		cout << "---------------" << endl;
+		cout << "X: ";
+		cin >> getPiceByUser.x;
+		cout << "Y: ";
+		cin >> getPiceByUser.y;
+		
+		getPiceByUser.x--;
+		getPiceByUser.y--;
+
+		getPiceByUser.y = TAMANY_TAULELL - getPiceByUser.y - 1;
+
+		if (getPiceByUser.x < 0 || getPiceByUser.x > TAMANY_TAULELL-1 || getPiceByUser.y < 1 || getPiceByUser.y > TAMANY_TAULELL-1) 
+		{
+			cout << "INPUT INVALID!!!!" << endl;
+			isGettingAPice = false; 
+			
+		}
+		else if(chessBoard[getPiceByUser.x][getPiceByUser.y] == ESPAI)
+		{
+			cout << "INPUT INVALID!!!!" << endl;
+			isGettingAPice = false;
+		}
+		else if ((whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'a' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'z') || (whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'A' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'Z'))
+		{
+			cout << "INPUT INVALID!!!!" << endl;
+			isGettingAPice = false;
+		}
+
+	} while (getPiceByUser.x < 1 || getPiceByUser.x > TAMANY_TAULELL || getPiceByUser.y < 1 || getPiceByUser.y > TAMANY_TAULELL);
+
+	return getPiceByUser;
 }

@@ -1,2 +1,3 @@
-﻿  taulell.cpp
+﻿  main.cpp
+C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\main.cpp(16,27): warning C4101: 'setPiceByUser': unreferenced local variable
   Ajedrez.vcxproj -> C:\Users\PolFarreAraguas\Documents\GitHub\AA2_Ajedrez_Jornet_Farre\Ajedrez\x64\Debug\Ajedrez.exe
