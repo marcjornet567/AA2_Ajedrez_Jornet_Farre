@@ -2,7 +2,6 @@
 #include "taulell.h"
 #include "utils.h"
 
-
 int main() {
 	//Creacio de Taulell
 	char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL];
@@ -14,10 +13,11 @@ int main() {
 	{
 		PrinteoTablero(chessBoard);
 
-		position userGetPice, setPiceByUser;
+		position userGetPice, setPiceByUser; //set pice va despres
 
-		userGetPice = getPiceByUser();
+		userGetPice = getPiceByUser(chessBoard, isWhiteTrue);
 
+		isWhiteTrue = !isWhiteTrue;
 
 		system("cls");
 	} while (gameOver);

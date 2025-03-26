@@ -90,18 +90,18 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 
 		if (getPiceByUser.x < 0 || getPiceByUser.x > TAMANY_TAULELL-1 || getPiceByUser.y < 1 || getPiceByUser.y > TAMANY_TAULELL-1) 
 		{
-			cout << "INPUT INVALID!!!!" << endl;
+			cout << "INPUT INVALID!!!! Fora d'els limits" << endl;
 			isGettingAPice = false; 
 			
 		}
 		else if(chessBoard[getPiceByUser.x][getPiceByUser.y] == ESPAI)
 		{
-			cout << "INPUT INVALID!!!!" << endl;
+			cout << "INPUT INVALID!!!! No hi ha cap pesa" << endl;
 			isGettingAPice = false;
 		}
 		else if ((whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'a' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'z') || (whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'A' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'Z'))
 		{
-			cout << "INPUT INVALID!!!!" << endl;
+			cout << "INPUT INVALID!!!! no pots agafar una pesa del rival" << endl;
 			isGettingAPice = false;
 		}
 
