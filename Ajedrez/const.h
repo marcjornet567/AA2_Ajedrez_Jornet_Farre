@@ -12,7 +12,8 @@
 */
 
 //llibreries propies
-//#include ""
+#include "taulell.h"
+#include "utils.h"
 using namespace std;
 
 //defines

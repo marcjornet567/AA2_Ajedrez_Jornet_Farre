@@ -76,7 +76,7 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 	{
 		isGettingAPice = true;
 		cout << "---------------" << endl;
-		cout << "Elige una piza:" << endl;
+		cout << "Elige una pieza:" << endl;
 		cout << "---------------" << endl;
 		cout << "X: ";
 		cin >> getPiceByUser.x;
