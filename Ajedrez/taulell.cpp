@@ -90,7 +90,7 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 
 		if (getPiceByUser.x < 0 || getPiceByUser.x > TAMANY_TAULELL-1 || getPiceByUser.y < 1 || getPiceByUser.y > TAMANY_TAULELL-1) 
 		{
-			cout << "INPUT INVALID!!!! Fora d'els limits" << endl;
+			cout << "INPUT INVALID!!!! Fora dels limits" << endl;
 			isGettingAPice = false; 
 			
 		}
