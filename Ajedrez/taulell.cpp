@@ -7,8 +7,8 @@ void IniciarTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 	{
 		for (int j = 0; j < TAMANY_TAULELL; j++)
 		{
-			if (j == TAMANY_TAULELL - 2) chessBoard[j][i] = PEON_NEGRE;
-			else if (j == 1) chessBoard[j][i] = PEON_BLANC;
+			if (j == TAMANY_TAULELL - 2) chessBoard[j][i] = PEON_BLANC;
+			else if (j == 1) chessBoard[j][i] = PEON_NEGRE;
 			else chessBoard[j][i] = ESPAI;
 		}
 	}
