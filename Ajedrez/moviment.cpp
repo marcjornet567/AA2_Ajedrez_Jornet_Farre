@@ -96,5 +96,3 @@ position MovimientoPeon(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], positio
 	}
 	return setPiceByUser;
 }
-
-position

@@ -24,6 +24,9 @@
     <ClCompile Include="moviment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Peca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="const.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="moviment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Peca.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
