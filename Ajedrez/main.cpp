@@ -26,6 +26,8 @@ int main() {
         // Obtener la pieza seleccionada
         char pieza = chessBoard[userGetPice.x][userGetPice.y];
 
+        position setPiceByUser = PutPiceByUser(chessBoard, whiteTurn);
+
         // Validar y realizar movimiento
         if (esMovimientoValido(chessBoard, userGetPice, setPiceByUser, pieza)) {
             cout << "Movimiento éxitoso." << endl;
