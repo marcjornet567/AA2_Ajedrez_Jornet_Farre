@@ -6,9 +6,9 @@
 
 int main() {
 
-    // Declaración del tablero
+    // DeclaraciÃ³n del tablero
     char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL];
-    IniciarTablero(chessBoard); // Inicializa el tablero con las piezas en su posición inicial
+    IniciarTablero(chessBoard); // Inicializa el tablero con las piezas en su posiciÃ³n inicial
 
     bool whiteTurn = true; // Comienza con el turno de las blancas
     bool gameOver = false; // Controla si el juego ha terminado
@@ -23,37 +23,22 @@ int main() {
         // Seleccionar una pieza
         position userGetPice = getPiceByUser(chessBoard, whiteTurn);
 
-        // Seleccionar la posición destino
-        position setPiceByUser;
-        cout << "Introduce la posición destino:" << endl;
-        cout << "X: ";
-        cin >> setPiceByUser.x;
-        cout << "Y: ";
-        cin >> setPiceByUser.y;
-
-        cout << " en la posición ("
-            << userGetPice.x << ", " << TAMANY_TAULELL - userGetPice.y << ")" << endl;
-        // Ajustar la posición destino (coordenadas de usuario a índices del tablero)
-        /*setPiceByUser.x--;
-        setPiceByUser.y--;
-        setPiceByUser.y = TAMANY_TAULELL - setPiceByUser.y - 1;*/
-
         // Obtener la pieza seleccionada
         char pieza = chessBoard[userGetPice.x][userGetPice.y];
 
         // Validar y realizar movimiento
         if (esMovimientoValido(chessBoard, userGetPice, setPiceByUser, pieza)) {
-            cout << "Movimiento realizado con éxito." << endl;
+            cout << "Movimiento Ã©xitoso." << endl;
             whiteTurn = !whiteTurn; // Cambiar turno
         }
         else {
-            cout << "Movimiento inválido. Intenta de nuevo." << endl;
+            cout << "Movimiento invÃ¡lido. Intenta de nuevo." << endl;
         }
 
-        // (Aquí puedes agregar lógica para verificar jaque, jaque mate o empate)
+        //Aqui podem comprobar si s'ha acabat el joc
         // gameOver = verificarEstadoDelJuego(chessBoard, whiteTurn);
     }
 
-    cout << "¡Fin del juego!" << endl;
+    cout << "Â¡Fin del juego!" << endl;
     return 0;
 }
