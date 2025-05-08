@@ -68,7 +68,7 @@ void PrinteoTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 	}
 }
 
-// Funcio per agafar una peÁa del taulell
+// Funcio per agafar una pe√ßa del taulell
 position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
 
 	position getPiceByUser;
@@ -97,7 +97,7 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 		}
 		else if (chessBoard[getPiceByUser.x][getPiceByUser.y] == ESPAI)
 		{
-			cout << "INPUT INVALID!!!! No hi ha cap pesa" << endl;
+			cout << "INPUT INVALID!!!! No hi ha cap peca" << endl;
 			isGettingAPice = false;
 		}
 		else if ((whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'a' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'z') || (whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'A' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'Z'))
@@ -113,7 +113,7 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 
 
 
-// FunciÛ per posar una peÁa al taulell
+// Funci√≥ per posar una pe√ßa al taulell
 position PutPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
 
 	position PutPiceByUser;
@@ -122,34 +122,34 @@ position PutPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 	do {
 		isPuttingAPice = true;
 		cout << "---------------" << endl;
-		cout << "Elige una posiciÛn para poner tu pieza:" << endl;
+		cout << "Elige una posici√≥n para poner tu pieza:" << endl;
 		cout << "---------------" << endl;
 		cout << "X: ";
 		cin >> PutPiceByUser.x;
 		cout << "Y: ";
 		cin >> PutPiceByUser.y;
 
-		// Ajusta los Ìndices para que coincidan con la matriz (resta 1)
+		// Ajusta los √≠ndices para que coincidan con la matriz (resta 1)
 		PutPiceByUser.x--;
 		PutPiceByUser.y--;
 
 		// Invierte el eje Y para que coincida con el formato del tablero
 		PutPiceByUser.y = TAMANY_TAULELL - PutPiceByUser.y - 1;
 
-		// Verifica si la posiciÛn est· fuera de los lÌmites del tablero
+		// Verifica si la posici√≥n est√° fuera de los l√≠mites del tablero
 		if (PutPiceByUser.x < 0 || PutPiceByUser.x >= TAMANY_TAULELL || PutPiceByUser.y < 0 || PutPiceByUser.y >= TAMANY_TAULELL) {
 			cout << "INPUT INVALID!!!! Fora dels limits" << endl;
 			isPuttingAPice = false;
 		}
-		// Verifica si la casilla ya est· ocupada
+		// Verifica si la casilla ya est√° ocupada
 		else if (chessBoard[PutPiceByUser.x][PutPiceByUser.y] != ESPAI) {
-			cout << "INPUT INVALID!!!! Ja hi ha una peÁa en aquesta posiciÛ" << endl;
+			cout << "INPUT INVALID!!!! Ja hi ha una pe√ßa en aquesta posici√≥" << endl;
 			isPuttingAPice = false;
 		}
-		// Verifica si el jugador intenta poner una pieza del rival (seg˙n turno)
+		// Verifica si el jugador intenta poner una pieza del rival (seg√∫n turno)
 		else if ((whiteTurn && islower(chessBoard[PutPiceByUser.x][PutPiceByUser.y])) ||
 			(!whiteTurn && isupper(chessBoard[PutPiceByUser.x][PutPiceByUser.y]))) {
-			cout << "INPUT INVALID!!!! No pots posar una peÁa del rival" << endl;
+			cout << "INPUT INVALID!!!! No pots posar una pe√ßa del rival" << endl;
 			isPuttingAPice = false;
 		}
 
