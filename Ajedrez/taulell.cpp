@@ -76,9 +76,9 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 	do
 	{
 		isGettingAPice = true;
-		cout << "---------------" << endl;
-		cout << "Elige una pieza:" << endl;
-		cout << "---------------" << endl;
+		cout << "-------------------------------------" << endl;
+		cout << "Elige una pieza para coger una pieza:" << endl;
+		cout << "-------------------------------------" << endl;
 		cout << "X: ";
 		cin >> getPiceByUser.x;
 		cout << "Y: ";
@@ -100,13 +100,13 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 			cout << "INPUT INVALID!!!! No hi ha cap peca" << endl;
 			isGettingAPice = false;
 		}
-		else if ((whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'a' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'z') || (whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'A' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'Z'))
+		else if ((whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] <= 'a' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'z') || (whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] <= 'A' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'Z'))
 		{
 			cout << "INPUT INVALID!!!! no pots agafar una pesa del rival" << endl;
 			isGettingAPice = false;
 		}
 
-	} while (getPiceByUser.x < 1 || getPiceByUser.x > TAMANY_TAULELL || getPiceByUser.y < 1 || getPiceByUser.y > TAMANY_TAULELL);
+	} while (!isGettingAPice);
 
 	return getPiceByUser;
 }
@@ -121,9 +121,9 @@ position PutPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 
 	do {
 		isPuttingAPice = true;
-		cout << "---------------" << endl;
-		cout << "Elige una posición para poner tu pieza:" << endl;
-		cout << "---------------" << endl;
+		cout << "---------------------------------------" << endl;
+		cout << "Elige una posicion para poner tu pieza:" << endl;
+		cout << "---------------------------------------" << endl;
 		cout << "X: ";
 		cin >> PutPiceByUser.x;
 		cout << "Y: ";
@@ -143,13 +143,13 @@ position PutPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 		}
 		// Verifica si la casilla ya está ocupada
 		else if (chessBoard[PutPiceByUser.x][PutPiceByUser.y] != ESPAI) {
-			cout << "INPUT INVALID!!!! Ja hi ha una peça en aquesta posició" << endl;
+			cout << "INPUT INVALID!!!! Ja hi ha una peca en aquesta posicio" << endl;
 			isPuttingAPice = false;
 		}
 		// Verifica si el jugador intenta poner una pieza del rival (según turno)
-		else if ((whiteTurn && islower(chessBoard[PutPiceByUser.x][PutPiceByUser.y])) ||
-			(!whiteTurn && isupper(chessBoard[PutPiceByUser.x][PutPiceByUser.y]))) {
-			cout << "INPUT INVALID!!!! No pots posar una peça del rival" << endl;
+		else if ((!whiteTurn && islower(chessBoard[PutPiceByUser.x][PutPiceByUser.y])) ||
+			(whiteTurn && isupper(chessBoard[PutPiceByUser.x][PutPiceByUser.y]))) {
+			cout << "INPUT INVALID!!!! No pots posar una peca del rival" << endl;
 			isPuttingAPice = false;
 		}
 
