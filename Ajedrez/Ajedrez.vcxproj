@@ -129,13 +129,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="moviment.cpp" />
-    <ClCompile Include="Peca.cpp" />
     <ClCompile Include="taulell.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="const.h" />
     <ClInclude Include="moviment.h" />
-    <ClInclude Include="Peca.h" />
     <ClInclude Include="taulell.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
