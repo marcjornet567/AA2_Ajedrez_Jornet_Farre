@@ -194,5 +194,39 @@ position MovimentPeon(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position 
     return userGetPice;
 }
 
+position MoverPieza(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser) {
+    // Obtener la pieza seleccionada    
+    char pieza = chessBoard[userGetPice.x][userGetPice.y];
+    position nuevaPos;
+    // Determinar el movimiento según el tipo de pieza
+    
+	//Utilitzo "tolower" per evitar fer el switch amb majuscules i minuscules
+	//Tambe utilitzem el "isupper" per saber si es blanca o negra
+    switch (tolower(pieza)) {
+    case 'p': // Peón
+        nuevaPos = MovimentPeon(chessBoard, userGetPice, setPiceByUser, isupper(pieza) ? 1 : -1);
+        break;
+    case 't': // Torre
+        nuevaPos = MovimentTorre(chessBoard, userGetPice, setPiceByUser);
+        break;
+    case 'b': // Alfil
+        nuevaPos = MovimentAlfil(chessBoard, userGetPice, setPiceByUser);
+        break;
+    case 'h': // Caballo
+        nuevaPos = MovimentCavall(chessBoard, userGetPice, setPiceByUser);
+        break;
+    case 'q': // Reina
+        nuevaPos = MovimentReina(chessBoard, userGetPice, setPiceByUser);
+        break;
+    case 'k': // Rey
+        nuevaPos = MovimentRei(chessBoard, userGetPice, setPiceByUser);
+        break;
+    default: // Movimiento inválido
+        nuevaPos = userGetPice; // No se mueve
+        break;
+    }
+    return nuevaPos; // Devuelve la nueva posición (o la original si el movimiento fue inválido)
+}
+
 
 
