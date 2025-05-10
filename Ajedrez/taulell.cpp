@@ -125,43 +125,39 @@ position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whi
 position PutPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
 
 	position PutPiceByUser;
-	bool isPuttingAPice = true;
+	bool isPuttingAPice = false;
 
 	do {
 		isPuttingAPice = true;
 		cout << "---------------------------------------" << endl;
-		cout << "Elige una posicion para poner tu pieza:" << endl;
+		cout << "Elige una posición para poner tu pieza:" << endl;
 		cout << "---------------------------------------" << endl;
-		cout << "X: ";
-		cin >> PutPiceByUser.x;
-		cout << "Y: ";
-		cin >> PutPiceByUser.y;
+		cout << "(1-" << TAMANY_TAULELL << "): ";
+		int inputY;
+		cin >> inputY;
+		cout << "(1-" << TAMANY_TAULELL << "): ";
+		int inputX;
+		cin >> inputX;
+		
+ 		
+ 		putPiecePosition.x = TAMANY_TAULELL - inputX;  // fila invertida
+		putPiecePosition.y = inputY - 1; 
 
-		// Ajusta los índices para que coincidan con la matriz (resta 1)
-		PutPiceByUser.x--;
-		PutPiceByUser.y--;
-
-		// Invierte el eje Y para que coincida con el formato del tablero
-		PutPiceByUser.y = TAMANY_TAULELL - PutPiceByUser.y - 1;
-
-		// Verifica si la posición está fuera de los límites del tablero
-		if (PutPiceByUser.x < 0 || PutPiceByUser.x >= TAMANY_TAULELL || PutPiceByUser.y < 0 || PutPiceByUser.y >= TAMANY_TAULELL) {
-			cout << "INPUT INVALID!!!! Fora dels limits" << endl;
-			isPuttingAPice = false;
+		if (putPiecePosition.x < 0 || putPiecePosition.x >= TAMANY_TAULELL ||
+    			putPiecePosition.y < 0 || putPiecePosition.y >= TAMANY_TAULELL) {
+    			cout << "INPUT INVALIDO!!!! Fuera de límites" << endl;
+    			isPuttingAPiece = false;
+    			continue;
 		}
-		// Verifica si la casilla ya está ocupada
-		else if (chessBoard[PutPiceByUser.x][PutPiceByUser.y] != ESPAI) {
-			cout << "INPUT INVALID!!!! Ja hi ha una peca en aquesta posicio" << endl;
-			isPuttingAPice = false;
-		}
-		// Verifica si el jugador intenta poner una pieza del rival (según turno)
-		else if ((!whiteTurn && islower(chessBoard[PutPiceByUser.x][PutPiceByUser.y])) ||
-			(whiteTurn && isupper(chessBoard[PutPiceByUser.x][PutPiceByUser.y]))) {
-			cout << "INPUT INVALID!!!! No pots posar una peca del rival" << endl;
-			isPuttingAPice = false;
-		}
+		//Si s'activa aixo no va la eliminacio de peces, pq ens donara el error.
+		///*Verificar si hay una pieza en la posición y si es de diferente color*/
+		//if (chessBoard[putPiecePosition.x][putPiecePosition.y] != ESPAI) {
+		//    cout << "INPUT INVALIDO!!!! Ya hay una pieza en esa posición" << endl;
+		//    isPuttingAPiece = false;
+		//    continue;
+		//}
 
 	} while (!isPuttingAPice);
 
-	return PutPiceByUser;
+	return putPiecePosition;
 }
