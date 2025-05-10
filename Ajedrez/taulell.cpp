@@ -4,14 +4,14 @@
 void IniciarTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 	//Funcionament Taulell
 	for (int i = 0; i < TAMANY_TAULELL; i++)
+{
+	for (int j = 0; j < TAMANY_TAULELL; j++)
 	{
-		for (int j = 0; j < TAMANY_TAULELL; j++)
-		{
-			if (j == TAMANY_TAULELL - 2) chessBoard[j][i] = PEON_BLANC;
-			else if (j == 1) chessBoard[j][i] = PEON_NEGRE;
-			else chessBoard[j][i] = ESPAI;
-		}
+		if (i == TAMANY_TAULELL - 2) chessBoard[i][j] = PEON_BLANC;
+		else if (i == 1) chessBoard[i][j] = PEON_NEGRE;
+		else chessBoard[i][j] = ESPAI;
 	}
+}
 
 	const short torreXPosL = 0;
 	const short torreXPosR = TAMANY_TAULELL - 1;
@@ -71,44 +71,52 @@ void PrinteoTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 // Funcio per agafar una peça del taulell
 position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
 
-	position getPiceByUser;
-	bool isGettingAPice = true;
+	position selectedPiecePosition;
+	bool isGettingAPice = false;
 	do
 	{
 		isGettingAPice = true;
 		cout << "-------------------------------------" << endl;
-		cout << "Elige una pieza para coger una pieza:" << endl;
+		cout << "Elige una pieza para mover:" << endl;
 		cout << "-------------------------------------" << endl;
-		cout << "X: ";
-		cin >> getPiceByUser.x;
-		cout << "Y: ";
-		cin >> getPiceByUser.y;
+		cout << "(1-" << TAMANY_TAULELL << "): ";
+		int inputY;
+		cin >> inputY;
+		cout << "(1-" << TAMANY_TAULELL << "): ";
+		int inputX;
+		cin >> inputX;
+		
+		selectedPiecePosition.x = TAMANY_TAULELL - inputX;  
+		selectedPiecePosition.y = inputY - 1; 
 
-		getPiceByUser.x--;
-		getPiceByUser.y--;
-
-		getPiceByUser.y = TAMANY_TAULELL - getPiceByUser.y - 1;
-
-		if (getPiceByUser.x < 0 || getPiceByUser.x > TAMANY_TAULELL - 1 || getPiceByUser.y < 1 || getPiceByUser.y > TAMANY_TAULELL - 1)
-		{
-			cout << "INPUT INVALID!!!! Fora dels limits" << endl;
-			isGettingAPice = false;
-
+		if (selectedPiecePosition.x < 0 || selectedPiecePosition.x >= TAMANY_TAULELL ||
+    			selectedPiecePosition.y < 0 || selectedPiecePosition.y >= TAMANY_TAULELL) {
+   			cout << "INPUT INVALIDO!!!! Fuera de límites" << endl;
+   			isGettingAPiece = false;
+    			continue;
 		}
-		else if (chessBoard[getPiceByUser.x][getPiceByUser.y] == ESPAI)
-		{
-			cout << "INPUT INVALID!!!! No hi ha cap peca" << endl;
-			isGettingAPice = false;
+		char piezaSeleccionada = chessBoard[selectedPiecePosition.x][selectedPiecePosition.y];
+		if (piezaSeleccionada == ESPAI) {
+   			cout << "INPUT INVALIDO!!!! No hay ninguna pieza en esta posición" << endl;
+    			isGettingAPiece = false;
+   			continue;
 		}
-		else if ((whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] <= 'a' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'z') || (whiteTurn && chessBoard[getPiceByUser.x][getPiceByUser.y] <= 'A' && chessBoard[getPiceByUser.x][getPiceByUser.y] >= 'Z'))
-		{
-			cout << "INPUT INVALID!!!! no pots agafar una pesa del rival" << endl;
-			isGettingAPice = false;
+		// Verificar que la pieza corresponde al jugador cuyo turno es
+		if (whiteTurn && islower(piezaSeleccionada)) {
+    			cout << "INPUT INVALIDO!!!! No puedes escoger una pieza del rival" << endl;
+    			isGettingAPiece = false;
+    			continue;
 		}
+		if (!whiteTurn && isupper(piezaSeleccionada)) {
+    			cout << "INPUT INVALIDO!!!! No puedes escoger una pieza del rival" << endl;
+    			isGettingAPiece = false;
+    			continue;
+		}
+		
 
 	} while (!isGettingAPice);
 
-	return getPiceByUser;
+	return selectedPiecePosition;
 }
 
 
