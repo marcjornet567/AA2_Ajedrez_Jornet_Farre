@@ -70,94 +70,90 @@ void PrinteoTablero(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL]) {
 
 // Funcio per agafar una peça del taulell
 position getPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
+    position selectedPiecePosition;
+    bool isGettingAPiece = false; 
 
-	position selectedPiecePosition;
-	bool isGettingAPice = false;
-	do
-	{
-		isGettingAPice = true;
-		cout << "-------------------------------------" << endl;
-		cout << "Elige una pieza para mover:" << endl;
-		cout << "-------------------------------------" << endl;
-		cout << "(1-" << TAMANY_TAULELL << "): ";
-		int inputY;
-		cin >> inputY;
-		cout << "(1-" << TAMANY_TAULELL << "): ";
-		int inputX;
-		cin >> inputX;
-		
-		selectedPiecePosition.x = TAMANY_TAULELL - inputX;  
-		selectedPiecePosition.y = inputY - 1; 
+    do {
+        isGettingAPiece = true;
+        cout << "-------------------------------------" << endl;
+        cout << "Elige una pieza para mover:" << endl;
+        cout << "-------------------------------------" << endl;
+        cout << "(1-" << TAMANY_TAULELL << "): ";
+        int inputY;
+        cin >> inputY;
+        cout << "(1-" << TAMANY_TAULELL << "): ";
+        int inputX;
+        cin >> inputX;
 
-		if (selectedPiecePosition.x < 0 || selectedPiecePosition.x >= TAMANY_TAULELL ||
-    			selectedPiecePosition.y < 0 || selectedPiecePosition.y >= TAMANY_TAULELL) {
-   			cout << "INPUT INVALIDO!!!! Fuera de límites" << endl;
-   			isGettingAPiece = false;
-    			continue;
-		}
-		char piezaSeleccionada = chessBoard[selectedPiecePosition.x][selectedPiecePosition.y];
-		if (piezaSeleccionada == ESPAI) {
-   			cout << "INPUT INVALIDO!!!! No hay ninguna pieza en esta posición" << endl;
-    			isGettingAPiece = false;
-   			continue;
-		}
-		// Verificar que la pieza corresponde al jugador cuyo turno es
-		if (whiteTurn && islower(piezaSeleccionada)) {
-    			cout << "INPUT INVALIDO!!!! No puedes escoger una pieza del rival" << endl;
-    			isGettingAPiece = false;
-    			continue;
-		}
-		if (!whiteTurn && isupper(piezaSeleccionada)) {
-    			cout << "INPUT INVALIDO!!!! No puedes escoger una pieza del rival" << endl;
-    			isGettingAPiece = false;
-    			continue;
-		}
-		
+        selectedPiecePosition.x = TAMANY_TAULELL - inputX;
+        selectedPiecePosition.y = inputY - 1;
 
-	} while (!isGettingAPice);
+        if (selectedPiecePosition.x < 0 || selectedPiecePosition.x >= TAMANY_TAULELL ||
+            selectedPiecePosition.y < 0 || selectedPiecePosition.y >= TAMANY_TAULELL) {
+            cout << "INPUT INVALIDO!!!! Fuera de límites" << endl;
+            isGettingAPiece = false;
+            continue;
+        }
+        char piezaSeleccionada = chessBoard[selectedPiecePosition.x][selectedPiecePosition.y];
+        if (piezaSeleccionada == ESPAI) {
+            cout << "INPUT INVALIDO!!!! No hay ninguna pieza en esta posición" << endl;
+            isGettingAPiece = false;
+            continue;
+        }
+        // Verificar que la pieza corresponde al jugador cuyo turno es
+        if (whiteTurn && islower(piezaSeleccionada)) {
+            cout << "INPUT INVALIDO!!!! No puedes escoger una pieza del rival" << endl;
+            isGettingAPiece = false;
+            continue;
+        }
+        if (!whiteTurn && isupper(piezaSeleccionada)) {
+            cout << "INPUT INVALIDO!!!! No puedes escoger una pieza del rival" << endl;
+            isGettingAPiece = false;
+            continue;
+        }
 
-	return selectedPiecePosition;
+    } while (!isGettingAPiece);
+
+    return selectedPiecePosition;
 }
-
-
 
 // Funció per posar una peça al taulell
 position PutPiceByUser(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], bool whiteTurn) {
+    position putPiecePosition; 
+    bool isPuttingAPiece = false; 
 
-	position PutPiceByUser;
-	bool isPuttingAPice = false;
+    do {
+        isPuttingAPiece = true;
+        cout << "---------------------------------------" << endl;
+        cout << "Elige una posición para poner tu pieza:" << endl;
+        cout << "---------------------------------------" << endl;
+        cout << "(1-" << TAMANY_TAULELL << "): ";
+        int inputY;
+        cin >> inputY;
+        cout << "(1-" << TAMANY_TAULELL << "): ";
+        int inputX;
+        cin >> inputX;
 
-	do {
-		isPuttingAPice = true;
-		cout << "---------------------------------------" << endl;
-		cout << "Elige una posición para poner tu pieza:" << endl;
-		cout << "---------------------------------------" << endl;
-		cout << "(1-" << TAMANY_TAULELL << "): ";
-		int inputY;
-		cin >> inputY;
-		cout << "(1-" << TAMANY_TAULELL << "): ";
-		int inputX;
-		cin >> inputX;
-		
- 		
- 		putPiecePosition.x = TAMANY_TAULELL - inputX;  // fila invertida
-		putPiecePosition.y = inputY - 1; 
+        putPiecePosition.x = TAMANY_TAULELL - inputX;  // fila invertida
+        putPiecePosition.y = inputY - 1;
 
-		if (putPiecePosition.x < 0 || putPiecePosition.x >= TAMANY_TAULELL ||
-    			putPiecePosition.y < 0 || putPiecePosition.y >= TAMANY_TAULELL) {
-    			cout << "INPUT INVALIDO!!!! Fuera de límites" << endl;
-    			isPuttingAPiece = false;
-    			continue;
-		}
-		//Si s'activa aixo no va la eliminacio de peces, pq ens donara el error.
-		///*Verificar si hay una pieza en la posición y si es de diferente color*/
-		//if (chessBoard[putPiecePosition.x][putPiecePosition.y] != ESPAI) {
-		//    cout << "INPUT INVALIDO!!!! Ya hay una pieza en esa posición" << endl;
-		//    isPuttingAPiece = false;
-		//    continue;
-		//}
+        if (putPiecePosition.x < 0 || putPiecePosition.x >= TAMANY_TAULELL ||
+            putPiecePosition.y < 0 || putPiecePosition.y >= TAMANY_TAULELL) {
+            cout << "INPUT INVALIDO!!!! Fuera de límites" << endl;
+            isPuttingAPiece = false;
+            continue;
+        }
+        // Verificar si hay una pieza en la posición y si es de diferente color
+       /* if (chessBoard[putPiecePosition.x][putPiecePosition.y] != ESPAI) {
+            cout << "INPUT INVALIDO!!!! Ya hay una pieza en esa posición" << endl;
+            isPuttingAPiece = false;
+            continue;
+        }*/
 
-	} while (!isPuttingAPice);
+    } while (!isPuttingAPiece);
 
-	return putPiecePosition;
+    return putPiecePosition;
 }
+
+
+
