@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:moviment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\const.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:const.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:taulell.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:taulell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:moviment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "moviment.cpp",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp",
+              "RelativeDocumentMoniker": "moviment.cpp",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp",
+              "RelativeToolTip": "moviment.cpp",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAKsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-03T08:59:00.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "const.h",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\const.h",
+              "RelativeDocumentMoniker": "const.h",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\const.h",
+              "RelativeToolTip": "const.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-03T08:55:53.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "taulell.h",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.h",
+              "RelativeDocumentMoniker": "taulell.h",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.h",
+              "RelativeToolTip": "taulell.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-03T08:55:53.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "utils.h",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\utils.h",
+              "RelativeDocumentMoniker": "utils.h",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\utils.h",
+              "RelativeToolTip": "utils.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-03T08:55:53.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "taulell.cpp",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp",
+              "RelativeDocumentMoniker": "taulell.cpp",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp",
+              "RelativeToolTip": "taulell.cpp",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAGwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-03T08:55:53.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "moviment.h",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h",
+              "RelativeDocumentMoniker": "moviment.h",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h",
+              "RelativeToolTip": "moviment.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-03T09:40:40.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-03T08:55:53.838Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
