@@ -33,10 +33,6 @@ int main() {
             cout << "Movimiento exitoso." << endl;
             whiteTurn = !whiteTurn; // Cambiar turno
         }
-        else if (chessBoard[nuevaPos.x][nuevaPos.y] != ESPAI) {
-            // Llamar a la función para eliminar la pieza
-            eliminarPieza(chessBoard, nuevaPos);
-        }
         else {
             cout << "Movimiento inválido. Intenta de nuevo." << endl;
         }

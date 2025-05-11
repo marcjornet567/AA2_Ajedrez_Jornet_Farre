@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:taulell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:moviment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:taulell.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:moviment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DA31C950-867B-4A56-BA68-6E45A0008E21}|Ajedrez.vcxproj|solutionrelative:moviment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,31 +50,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "moviment.h",
-              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h",
-              "RelativeDocumentMoniker": "moviment.h",
-              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h",
-              "RelativeToolTip": "moviment.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-03T09:40:40.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "moviment.cpp",
               "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp",
               "RelativeDocumentMoniker": "moviment.cpp",
               "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.cpp",
               "RelativeToolTip": "moviment.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAuwK4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-03T08:59:00.326Z"
+              "WhenOpened": "2025-05-03T08:59:00.326Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "const.h",
               "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\const.h",
               "RelativeDocumentMoniker": "const.h",
@@ -86,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "taulell.h",
               "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.h",
               "RelativeDocumentMoniker": "taulell.h",
@@ -98,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "utils.h",
               "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\utils.h",
               "RelativeDocumentMoniker": "utils.h",
@@ -110,28 +99,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "taulell.cpp",
               "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp",
               "RelativeDocumentMoniker": "taulell.cpp",
               "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\taulell.cpp",
               "RelativeToolTip": "taulell.cpp",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAgwGYAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAuwJ8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-03T08:55:53.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "moviment.h",
+              "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h",
+              "RelativeDocumentMoniker": "moviment.h",
+              "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\moviment.h",
+              "RelativeToolTip": "moviment.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-03T09:40:40.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\roku\\Documents\\GitHub\\AA2_Ajedrez_Jornet_Farre\\Ajedrez\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-03T08:55:53.838Z"
+              "WhenOpened": "2025-05-03T08:55:53.838Z",
+              "EditorCaption": ""
             }
           ]
         }
