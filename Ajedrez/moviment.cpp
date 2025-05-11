@@ -7,13 +7,20 @@ void eliminarPieza(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position pos
 }
 // Función para mover la reina
 position MovimentReina(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser) {
+
+	// Validar que el movimiento sea en Horizontal, vertical o diagonal
     if (userGetPice.x != setPiceByUser.x && userGetPice.y != setPiceByUser.y &&
         abs(userGetPice.x - setPiceByUser.x) != abs(userGetPice.y - setPiceByUser.y)) {
-        return userGetPice; // Movimiento inválido
+        return userGetPice; // Si cumple con todas estas comprovaciones el Movimiento sera inválido
     }
+    // Determinar la dirección del movimiento en el eje x
     int dx = (setPiceByUser.x > userGetPice.x) - (setPiceByUser.x < userGetPice.x);
+	// Determinar la dirección del movimiento en el eje y
     int dy = (setPiceByUser.y > userGetPice.y) - (setPiceByUser.y < userGetPice.y);
+	// Moverse en la dirección determinada
     int x = userGetPice.x + dx, y = userGetPice.y + dy;
+
+	// Comprobar si hay obstáculos en el camino
     while (x != setPiceByUser.x || y != setPiceByUser.y) {
         if (chessBoard[x][y] != ESPAI) {
             return userGetPice; // Obstáculo
@@ -22,6 +29,7 @@ position MovimentReina(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position
         y += dy;
     }
 	// Verificar que la casilla destino no esté ocupada por una pieza del mismo color
+	//Verificamos si esta no es un espacio vacio y si la pieza en la posicon de destino es del mismo color que la pieza seleccionada
     if (chessBoard[setPiceByUser.x][setPiceByUser.y] != ESPAI &&
         (isupper(chessBoard[setPiceByUser.x][setPiceByUser.y]) == isupper(chessBoard[userGetPice.x][userGetPice.y]))) {
         return userGetPice; // Casilla ocupada por pieza del mismo color
@@ -42,62 +50,74 @@ position MovimentRei(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position u
     return userGetPice; // Si el movimiento no es válido, regresar la posición original
 }
 
-
 // Función para mover el caballo
 position MovimentCavall(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser) {
+	// Calcular la diferencia en filas y columnas entre la posición actual y la posición de destino, con el valor absoluto(abs)
     int dx = abs(userGetPice.x - setPiceByUser.x);
     int dy = abs(userGetPice.y - setPiceByUser.y);
+
+    // Un caballo se mueve en forma de "L": 2 casillas en una dirección y 1 casilla en la otra
     if ((dx == 2 && dy == 1) || (dx == 1 && dy == 2)) {
+
+        // Verificar si la casilla de destino está vacía o si contiene una pieza del color opuesto
         if (chessBoard[setPiceByUser.x][setPiceByUser.y] == ESPAI ||
             (isupper(chessBoard[setPiceByUser.x][setPiceByUser.y]) != isupper(chessBoard[userGetPice.x][userGetPice.y]))) {
-            return setPiceByUser;
+			return setPiceByUser; // Movimiento válido
         }
     }
-    return userGetPice;
+	return userGetPice; // Si el movimiento no es válido, regresar la posición original
 }
 
 // Función para mover el alfil
 position MovimentAlfil(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser) {
+    // Calcular la diferencia en filas y columnas entre la posición actual y la posición de destino
     int dx = setPiceByUser.x - userGetPice.x;
     int dy = setPiceByUser.y - userGetPice.y;
+	// Verificar si el movimiento es diagonal
     if (abs(dx) == abs(dy)) {
         int stepX = (dx > 0) ? 1 : -1;
         int stepY = (dy > 0) ? 1 : -1;
         int x = userGetPice.x + stepX;
         int y = userGetPice.y + stepY;
+		//Comprobar si hay obstáculos en el camino
         while (x != setPiceByUser.x && y != setPiceByUser.y) {
             if (chessBoard[x][y] != ESPAI) return userGetPice; // Obstáculo
             x += stepX;
             y += stepY;
         }
+		// Verificar que la casilla destino no esté ocupada por una pieza del mismo color
         if (chessBoard[setPiceByUser.x][setPiceByUser.y] == ESPAI ||
             (isupper(chessBoard[setPiceByUser.x][setPiceByUser.y]) != isupper(chessBoard[userGetPice.x][userGetPice.y]))) {
-            return setPiceByUser;
+			return setPiceByUser; // Movimiento válido
         }
     }
-    return userGetPice;
+	return userGetPice; // Si el movimiento no es válido, regresar la posición original
 }
 
 // Función para mover la torre
 position MovimentTorre(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser) {
+	// Calcular la diferencia en filas y columnas entre la posición actual y la posición de destino
     int dx = setPiceByUser.x - userGetPice.x;
     int dy = setPiceByUser.y - userGetPice.y;
+    // Verificar si el movimiento es horizontal o vertical (la torre se mueve en línea recta)
     if (dx == 0 || dy == 0) {
         int stepX = (dx > 0) - (dx < 0);
         int stepY = (dy > 0) - (dy < 0);
         int x = userGetPice.x + stepX;
         int y = userGetPice.y + stepY;
+		// Comprobar si hay obstáculos en el camino
         while (x != setPiceByUser.x || y != setPiceByUser.y) {
             if (chessBoard[x][y] != ESPAI) return userGetPice; // Obstáculo
             x += stepX;
             y += stepY;
         }
+		// Verificar que la casilla destino no esté ocupada por una pieza del mismo color
         if (chessBoard[setPiceByUser.x][setPiceByUser.y] == ESPAI ||
             (isupper(chessBoard[setPiceByUser.x][setPiceByUser.y]) != isupper(chessBoard[userGetPice.x][userGetPice.y]))) {
-            return setPiceByUser;
+			return setPiceByUser; // Movimiento válido
         }
     }
-    return userGetPice;
+	return userGetPice; // Si el movimiento no es válido, regresar la posición original
 }
 
 // Función para mover el peón
@@ -119,6 +139,7 @@ position MovimentPeon(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position 
     }
     // Captura diagonal
     if (abs(setPiceByUser.y - userGetPice.y) == 1 && setPiceByUser.x == userGetPice.x + direction) {
+		// Verificar que la casilla destino no esté ocupada por una pieza del mismo color
         if (chessBoard[setPiceByUser.x][setPiceByUser.y] != ESPAI &&
             (isupper(chessBoard[setPiceByUser.x][setPiceByUser.y]) != isupper(chessBoard[userGetPice.x][userGetPice.y]))) {
             return setPiceByUser;

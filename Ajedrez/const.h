@@ -3,16 +3,6 @@
 #include <iostream>
 #include <Windows.h>
 
-/*llibreries que d moment no es fan servir i s'hauran d'eliminar
-#include <vector>
-#include <time.h>
-#include <thread>
-#include <chrono>
-
-*/
-
-//llibreries propies
-
 using namespace std;
 
 //defines
