@@ -122,7 +122,14 @@ position MovimentTorre(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position
 
 // Función para mover el peón
 position MovimentPeon(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser, int color) {
-    int direction = color == 1 ? -1 : 1; // blanco o negro
+    int direction = color;
+    if (color == 1) {
+        direction = -1; // blanco
+    }
+    else {
+        direction = 1; // negro
+    }
+
     // Un paso adelante
     if (setPiceByUser.y == userGetPice.y) {
         if (setPiceByUser.x == userGetPice.x + direction && chessBoard[setPiceByUser.x][setPiceByUser.y] == ESPAI) {
