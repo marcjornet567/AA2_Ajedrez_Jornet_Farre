@@ -123,10 +123,8 @@ position MovimentTorre(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position
 // Función para mover el peón
 position MovimentPeon(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser, int color) {
     int direction = color;
-<<<<<<< HEAD
-	// Determinar la dirección del movimiento según el color
-=======
->>>>>>> develop
+
+// Determinar la dirección del movimiento según el color
     if (color == 1) {
         direction = -1; // blanco
     }
@@ -166,13 +164,9 @@ position MoverPieza(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position us
     char pieza = chessBoard[userGetPice.x][userGetPice.y];
     position nuevaPos;
     // Determinar el movimiento según el tipo de pieza
-    
+	
 	//Utilitzo "tolower" per evitar fer el switch amb majuscules i minuscules
-<<<<<<< HEAD
 	//Tambe utilitzem el "isupper (pieza) ? 1 : -1)" per saber si es blanca o negra
-=======
-	//Tambe utilitzem el "isupper" per saber si es blanca o negra
->>>>>>> develop
     switch (tolower(pieza)) {
     case 'p': // Peón
         nuevaPos = MovimentPeon(chessBoard, userGetPice, setPiceByUser, isupper(pieza) ? 1 : -1);
