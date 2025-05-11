@@ -129,7 +129,7 @@ position MovimentPeon(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position 
 
 
 
-position MoverPieza(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser) {
+position MoverPieza(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position userGetPice, position setPiceByUser, int& puntosBlancas, int& puntosNegras) {
     // Obtener la pieza seleccionada    
     char pieza = chessBoard[userGetPice.x][userGetPice.y];
     position nuevaPos;
@@ -171,14 +171,25 @@ position MoverPieza(char chessBoard[TAMANY_TAULELL][TAMANY_TAULELL], position us
     // Si hay una pieza enemiga en la casilla destino, eliminarla
     if (chessBoard[nuevaPos.x][nuevaPos.y] != ESPAI &&
         (isupper(chessBoard[nuevaPos.x][nuevaPos.y]) != isupper(pieza))) {
+
+        char piezaCapturada = chessBoard[nuevaPos.x][nuevaPos.y];  // Guardar la pieza capturada antes de eliminar, pq si no no lo tiene en cuenta y soo entraria en el else.
+
         eliminarPieza(chessBoard, nuevaPos);
+
+        // Actualizar el contador de piezas
+        if (isupper(piezaCapturada)) {
+            puntosBlancas--;
+        }
+        else {
+            puntosNegras--;
+        }
     }
 
     // Realizar el movimiento
     chessBoard[nuevaPos.x][nuevaPos.y] = chessBoard[userGetPice.x][userGetPice.y];
     chessBoard[userGetPice.x][userGetPice.y] = ESPAI;
 
-    return nuevaPos; // Devuelve la nueva posición (o la original si el movimiento fue inválido)
+    return nuevaPos; // Devuelve la nueva posición o la original si el movimiento fue inválido
 }
 
 
